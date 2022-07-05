@@ -1,0 +1,30 @@
+{% extends 'admin index.html' %}
+{% block body %}
+<body>
+<style>
+  #ab th{
+  background-color:#2c4964;
+  color:white;
+  }
+</style>
+<form id="form1" name="form1" method="post" action="viewfeedbac">
+  <table width="254" id="ab" border="1" class="table table-bordered table-hover" >
+    <tr>
+      <th width="40" scope="row"><strong>Name</strong></th>
+      <th width="68"><strong>Feedback</strong></th>
+      <th width="52"><strong>Date</strong></th>
+    </tr>
+    <tr>
+      {% for i in value %}
+      <td scope="row">&nbsp;{{i[4]}} {{i[5]}}</td>
+      <td>&nbsp;{{i[2]}}</td>
+      <td>{{i[3]}}&nbsp;</td>
+
+    </tr>
+    {% endfor %}
+  </table>
+
+</form>
+</body>
+
+{% endblock %}

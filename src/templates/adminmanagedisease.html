@@ -1,0 +1,85 @@
+{% extends 'admin index.html' %}
+{% block body %}
+   
+
+<center>
+  <form method="post" >
+    {% if data['updates']%}
+                    <h1 style="font-size: 40px;font-weight:bold;">
+   Update Disease</h1>
+
+
+
+<table class="table" style="width: 500px;color: black;">
+  <tr>
+    <th>Disease</th>
+    <td><input type="text" name="title"  value="{{data['updates'][0]['disease']}}" class="form-control"></td>
+  </tr>
+  
+  
+   
+  <tr>
+    <td align="center" colspan="2"><input type="submit" name="update" value="UPDATE" class="btn btn-success"></td>
+  </tr>
+
+</table>
+
+
+{%else%}
+
+
+        <h1 style="font-size: 40px;font-weight:bold;">
+    Manage Disease </h1>
+
+<table class="table" style="width: 500px;color: black;">
+  <tr>
+    <th>Disease</th>
+    <td><input type="text" name="title"  required class="form-control"></td>
+  </tr>
+
+  <tr>
+    <td align="center" colspan="2"><input type="submit" name="add" value="ADD" class="btn btn-success"></td>
+  </tr>
+</table>
+
+{%endif%}
+
+
+
+
+           
+<h1 style="font-size: 40px;font-weight: bold;">View Disease</h1>
+
+
+<table class="table" style="width: 500px;">
+      <tr>
+        <th>Slno</th>
+        <th>Disease</th>
+        
+      </tr>
+
+    {%for row in val%}
+      <tr>
+        <td>{{loop.index}}</td>
+     <td>{{row[1] }}</td>
+<!--       <td><a class ="btn btn-success" href="?action=update&oid={{row['Disease_id'] }}">update</a></td>
+ -->      <td><a class ="btn btn-danger" href="?action=delete&id={{row[0] }}">delete</a></td>
+  <td><a class ="btn btn-info" href="adminmanagesymptoms?id={{row[0]}}">manage symptoms</a></td>
+
+      </tr>
+{%endfor%}
+
+
+
+
+     
+    </table>
+   
+        
+    </center>
+</form>      
+
+
+
+
+{% endblock %}

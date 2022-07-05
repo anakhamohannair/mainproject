@@ -1,0 +1,31 @@
+{% extends 'admin index.html' %}
+{% block body %}
+
+
+<body>
+<style>
+  #ab th{
+  background-color:#2c4964;
+  color:white;
+  }
+</style>
+
+<form id="form1" name="form1" method="post" action="addtip">
+  <table width="200" border="1" id="ab" class="table table-bordered table-hover" >
+    <tr>
+      <th scope="row">Tips</th>
+      <th>&nbsp;</th>
+    </tr>
+    {% for i in value %}
+    <tr>
+      <td scope="row">&nbsp;{{i[1]}}</td>
+      <td><a href="deletetip?id={{i[0]}}">Delete</a></td>
+    </tr>
+    {% endfor %}
+    <tr align="center">
+      <td colspan="3" scope="row"><input type="submit" name="Submit" value="Add Tips" /></td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}

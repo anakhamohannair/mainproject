@@ -1,0 +1,74 @@
+<!--DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head-->
+{% extends 'index.html' %}
+{% block body %}
+
+<body>
+<style>
+  #ab th{
+  background-color:#2c4964;
+  color:white;
+  }
+</style>
+<form id="form1" name="form1" method="post" action="register1">
+  <div align="center">
+    <table width="200" border="1" id="ab" class="table table-bordered table-hover" >
+      <tr>
+        <th scope="row">First name</th>
+        <td><label for="textfield"></label>
+        <input type="text" name="textfield" id="textfield" class="form-control" /></td>
+      </tr>
+      <tr>
+        <th scope="row">Last name</th>
+        <td><label for="textfield2"></label>
+        <input type="text" name="textfield2" id="textfield2" class="form-control" /></td>
+      </tr>
+      <tr>
+        <th scope="row">Place</th>
+        <td><label for="textfield3"></label>
+        <input type="text" name="textfield3" id="textfield3" class="form-control" /></td>
+      </tr>
+      <tr>
+        <th scope="row">Post</th>
+        <td><label for="textfield4"></label>
+        <input type="text" name="textfield4" id="textfield4" class="form-control" /></td>
+ /></td>
+      </tr>
+      <tr>
+        <th scope="row">Pin</th>
+        <td><label for="textfield5"></label>
+        <input type="text" name="textfield5" id="textfield5" class="form-control" /></td>
+      </tr>
+      <tr>
+        <th scope="row">Phone</th>
+        <td><label for="textfield6"></label>
+        <input type="text" name="textfield6" id="textfield6" class="form-control"/></td>
+      </tr>
+      <tr>
+        <th scope="row">Email</th>
+        <td><label for="textfield7"></label>
+        <input type="text" name="textfield7" id="textfield7" class="form-control"/></td>
+      </tr>
+      <tr>
+        <th scope="row">Username</th>
+        <td><label for="textfield8"></label>
+        <input type="text" name="textfield8" id="textfield8" class="form-control" /></td>
+      </tr>
+      <tr>
+        <th scope="row">Password</th>
+        <td><label for="textfield9"></label>
+        <input type="text" name="textfield9" id="textfield9" class="form-control" /></td>
+      </tr>
+      <tr>
+        <td colspan="2" scope="row"><input type="submit" name="button" id="button" value="signup" /></td>
+      </tr>
+    </table>
+  </div>
+</form>
+</body>
+
+{% endblock %}

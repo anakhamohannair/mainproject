@@ -1,0 +1,41 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends 'admin index.html' %}
+{% block body %}
+<body>
+<style>
+  #ab th{
+  background-color:#2c4964;
+  color:white;
+  }
+</style>
+<form id="form1" name="form1" method="post" action="">
+  <table width="368" border="1" id="ab" class="table table-bordered table-hover" >
+    <tr>
+      <th width="40" scope="row">Name</th>
+      <th width="33"><strong>Place</strong></th>
+      <th width="51"><strong>Post</strong></th>
+      <th width="63"><strnong>Pin</strnong></th>
+      <th width="62"><strong>Phone Number</strong></th>
+      <th width="79"><strong>Email</strong></th>
+    </tr>
+    <tr>
+      {% for i in val%}
+
+      <th scope="row">&nbsp;{{i[2]}} {{i[3]}}</th>
+      <td>&nbsp;{{i[4]}}</td>
+      <td>&nbsp;{{i[5]}}</td>
+      <td>{{i[6]}}&nbsp;</td>
+      <td>{{i[7]}}&nbsp;</td>
+      <td>{{i[8]}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</form>
+</body>
+<!--</html>-->
+{% endblock %}
